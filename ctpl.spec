@@ -1,6 +1,6 @@
 %define name			ctpl
 %define version			0.2.2
-%define release			1
+%define release			2
 
 %define use_ccache        	1
 %define ccachedir		~/.ccache-OOo%{mdvsuffix}%{?_with_ccache: %global use_ccache 1}%{?_without_ccache: %global use_ccache 0}
