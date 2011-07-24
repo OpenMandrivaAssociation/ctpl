@@ -16,9 +16,8 @@ Release:	%mkrel %{release}
 Source:		http://download.tuxfamily.org/%{name}/releases/%{name}-%{version}.tar.gz
 URL:		http://ctpl.tuxfamily.org/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-
 BuildRequires:	gtk-doc
-BuildRequires:	libglib2.0-devel
+BuildRequires:	glib2.0-devel
 BuildRequires:	pkgconfig
 
 %description
