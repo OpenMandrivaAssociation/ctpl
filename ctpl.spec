@@ -45,3 +45,12 @@ rm -rf %{buildroot}
 %{_bindir}/ctpl
 %{_libdir}/*
 %{_includedir}/%{name}/*
+
+%changelog
+* Sun Jul 24 2011 Yuri Myasoedov <omerta13@mandriva.org> 0.2.2-3mdv2012.0
++ Revision: 691420
+- Fixed BuildRequires tag for glib2-devel once again
+- Fixed release
+- Fixed BuildRequires tag for glib2-devel
+- Initial package import
+
