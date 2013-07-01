@@ -10,7 +10,7 @@
 Name:		%{name}
 Group:		Sciences/Mathematics
 License:	GPLv3+
-Summary:	CTPL is a template engine library written in C
+Summary:	Template engine library written in C
 Version:	0.2.2
 Release:	%mkrel %{release}
 Source:		http://download.tuxfamily.org/%{name}/releases/%{name}-%{version}.tar.gz
