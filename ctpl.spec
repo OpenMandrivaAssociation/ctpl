@@ -1,6 +1,6 @@
 %define name			ctpl
 %define version			0.2.2
-%define release			3
+%define release 			4
 
 %define use_ccache        	1
 %define ccachedir		~/.ccache-OOo%{mdvsuffix}%{?_with_ccache: %global use_ccache 1}%{?_without_ccache: %global use_ccache 0}
@@ -15,7 +15,6 @@ Version:	0.2.2
 Release:	%mkrel %{release}
 Source:		http://download.tuxfamily.org/%{name}/releases/%{name}-%{version}.tar.gz
 URL:		http://ctpl.tuxfamily.org/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	gtk-doc
 BuildRequires:	glib2-devel
 BuildRequires:	pkgconfig
@@ -36,10 +35,8 @@ documentation for a more complete description.
 %makeinstall
 
 %clean
-rm -rf %{buildroot}
 
 %files
-%defattr(-,root,root)
 %{_datadir}/gtk-doc/*
 %{_datadir}/man/man1/*
 %{_bindir}/ctpl
