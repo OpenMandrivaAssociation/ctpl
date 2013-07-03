@@ -1,22 +1,18 @@
-%define name			ctpl
-%define version			0.2.2
-%define release 			4
-
 %define use_ccache        	1
 %define ccachedir		~/.ccache-OOo%{mdvsuffix}%{?_with_ccache: %global use_ccache 1}%{?_without_ccache: %global use_ccache 0}
 %define _enable_debug_packages 	%{nil}
 %define debug_package          	%{nil}
 
-Name:		%{name}
+Name:		ctpl
 Group:		Sciences/Mathematics
 License:	GPLv3+
 Summary:	Template engine library written in C
 Version:	0.2.2
-Release:	%mkrel %{release}
+Release:	4
 Source:		http://download.tuxfamily.org/%{name}/releases/%{name}-%{version}.tar.gz
 URL:		http://ctpl.tuxfamily.org/
 BuildRequires:	gtk-doc
-BuildRequires:	glib2-devel
+BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig
 
 %description
