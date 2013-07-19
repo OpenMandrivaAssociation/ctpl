@@ -7,9 +7,9 @@ Name:		ctpl
 Group:		Sciences/Mathematics
 License:	GPLv3+
 Summary:	Template engine library written in C
-Version:	0.2.2
-Release:	4
-Source:		http://download.tuxfamily.org/%{name}/releases/%{name}-%{version}.tar.gz
+Version:	0.3.3
+Release:	1
+Source:		http://download.tuxfamily.org/ctpl/releases/%{name}-%{version}.tar.gz
 URL:		http://ctpl.tuxfamily.org/
 BuildRequires:	gtk-doc
 BuildRequires:	pkgconfig(glib-2.0)
@@ -46,4 +46,5 @@ documentation for a more complete description.
 - Fixed release
 - Fixed BuildRequires tag for glib2-devel
 - Initial package import
+
 
