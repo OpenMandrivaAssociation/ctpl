@@ -1,7 +1,10 @@
 %define use_ccache        	1
 %define ccachedir		~/.ccache-OOo%{mdvsuffix}%{?_with_ccache: %global use_ccache 1}%{?_without_ccache: %global use_ccache 0}
-%define _enable_debug_packages 	%{nil}
 %define debug_package          	%{nil}
+
+%define major 2
+%define libname %mklibname %{name} %{major}
+%define devname %mklibname -d %{name}
 
 Name:		ctpl
 Group:		Sciences/Mathematics
@@ -20,6 +23,20 @@ CTPL is a template engine library written in C and distributed
 under the terms of the GNU GPLv3+. See the overview in the
 documentation for a more complete description.
 
+%package -n %{libname}
+Summary: Template engine library written in C
+Group:   Sciences/Mathematics
+
+%description -n %{libname}
+Library package for ctpl
+
+%package -n %{devname}
+Summary: Development files for ctpl
+Group:   Sciences/Mathematics
+
+%description -n %{devname}
+Development files for ctpl library
+
 %prep
 %setup -q
 
@@ -30,13 +47,15 @@ documentation for a more complete description.
 %install
 %makeinstall
 
-%clean
-
 %files
 %{_datadir}/gtk-doc/*
 %{_datadir}/man/man1/*
 %{_bindir}/ctpl
+
+%files -n %{libname}
 %{_libdir}/*
+
+%files -n %{devname}
 %{_includedir}/%{name}/*
 
 %changelog
