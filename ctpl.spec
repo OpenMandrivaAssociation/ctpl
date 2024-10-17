@@ -13,7 +13,7 @@ Summary:	Template engine library written in C
 Version:	0.3.3
 Release:	2
 Source:		http://download.tuxfamily.org/ctpl/releases/%{name}-%{version}.tar.gz
-URL:		http://ctpl.tuxfamily.org/
+URL:		https://ctpl.tuxfamily.org/
 BuildRequires:	gtk-doc
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig
